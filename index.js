@@ -2,10 +2,7 @@ import connectDb from "./config/db.js";
 import app from "./app.js";
 import {createServer } from 'http';
 import config from "./config/config.js";
-import UserService from "./service/user.service.js";
-const userService=new UserService();
-
-
+import userService from "./services/user.service.js";
 async function main(){
 await connectDb()
 const server =createServer(app);

@@ -3,10 +3,7 @@ import bcrypt from "bcryptjs";
 import jwt from 'jsonwebtoken';
 import config from "../config/config.js";
 class UserService{
-
-  constructor(){
-
-  }
+  constructor(){};
   async register(email,password,username){
 /*
 1. get email, password /
@@ -41,6 +38,6 @@ return {
 }
 
 
-export default UserService;
+export default Object.freeze(new UserService());
 
 
